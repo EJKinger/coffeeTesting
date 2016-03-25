@@ -20,7 +20,7 @@
 
 
 ## Development
-
+  - To watch the src/ directory and compile changes on save, `npm run coffee`
 ### Installing Dependencies
 
 
