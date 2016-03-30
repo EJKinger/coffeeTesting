@@ -1,22 +1,31 @@
-eric () ->
-  console.log('eric')
+gameBoard = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+]
 
-#returns the sum of two numbers
-sum (x, y) -> x + y
+checkRows = (board) ->
+  for row in board
+    result = checkRow row
+    if result is 'O'
+      'O'
+    if result is 'X'
+      'X'
+    else
+      null
+  checkRow = (row) ->
+    X = 0
+    O = 0
+    for square in row
+      if square is 'X'
+        X++
+      if square is 'O'
+        O++
+    if X is 3
+      'X'
+    if O is 3
+      'O'
 
-nfl =
-  atl: 'falcons'
-  det: 'lions'
-  gb: 'packers'
+# checkCols = (board) ->
+#   for col in board
 
-if true or false
-  console.log('logs')
-else
-  console.log('not')
-
-foods = ['broccoli', 'spinach', 'chocolate']
-console.log food for food in foods when food isnt 'chocolate'
-
-number = 100
-
-countdown = (num for num in [10..1])
